@@ -1,0 +1,24 @@
+{
+    "name": "itwmw/engine-validate-mysql-rules",
+    "description": "新版微擎验证器Mysql验证规则集",
+    "authors": [
+        {
+            "name": "虞灪",
+            "email": "995645888@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Itwmw\\Validate\\Mysql\\Rules": "src"
+        }
+    },
+    "require": {
+        "php": "^7.2.5|^8.0|^8.1",
+        "ext-json": "*",
+        "w7/engine-validate": "^3",
+        "itwmw/table-structure": "^0.1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3"
+    }
+}
