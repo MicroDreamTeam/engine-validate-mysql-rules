@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Itwmw\\Validate\\Mysql\\Rules": "src"
+            "Itwmw\\Validate\\Mysql\\Rules\\": "src"
         }
     },
     "require": {
