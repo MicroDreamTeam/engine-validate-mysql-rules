@@ -14,9 +14,9 @@
     },
     "license": "Apache-2.0",
     "require": {
-        "php": "^7.2.5|^8.0|^8.1",
+        "php": "^7.3|^8.0|^8.1",
         "ext-json": "*",
-        "w7/engine-validate": "^3",
+        "w7/engine-validate": "^4",
         "itwmw/table-structure": "*"
     },
     "require-dev": {
