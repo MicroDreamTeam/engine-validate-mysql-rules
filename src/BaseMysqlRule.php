@@ -7,14 +7,14 @@ use W7\Validate\Support\Rule\BaseRule;
 abstract class BaseMysqlRule extends BaseRule
 {
     /** @var bool  */
-    protected $unsigned = false;
+    protected bool $unsigned = false;
 
     /** @var int  */
-    protected $length = -1;
+    protected int $length = -1;
 
     /** @var int  */
-    protected $precision = -1;
-    
+    protected int $precision = -1;
+
     public function __construct(bool $unsigned = false, int $length = -1, int $precision = -1)
     {
         $this->unsigned  = $unsigned;
@@ -36,7 +36,7 @@ abstract class BaseMysqlRule extends BaseRule
         if ($num < 0) {
             $num = -$num;
         }
-        
+
         $scientificNotation = 0;
         if (false !== stripos($num, 'e')) {
             $lengthArray        = explode('e', strtolower($num));
@@ -72,7 +72,7 @@ abstract class BaseMysqlRule extends BaseRule
      * @param numeric $num
      * @return bool
      */
-    protected function checkNumberLength($num): bool
+    protected function checkNumberLength(float|int|string $num): bool
     {
         list($numLength, $precision) = $this->getNumberLength($num);
 

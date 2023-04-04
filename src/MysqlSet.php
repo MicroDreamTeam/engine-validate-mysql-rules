@@ -13,8 +13,7 @@ use W7\Validate\Support\Rule\BaseRule;
  */
 class MysqlSet extends BaseRule
 {
-    /** @var false|Column  */
-    protected $column;
+    protected Column|false $column;
 
     public function __construct(string $table, string $field)
     {
@@ -34,7 +33,7 @@ class MysqlSet extends BaseRule
         if (!is_array($value)) {
             return false;
         }
-        
+
         return count(array_intersect($this->column->options, $value)) === count($value);
     }
 }

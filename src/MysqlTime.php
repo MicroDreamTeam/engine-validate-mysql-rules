@@ -17,7 +17,7 @@ class MysqlTime extends BaseMysqlRule
             return false;
         }
 
-        if (false !== strpos($value, ':')) {
+        if (str_contains($value, ':')) {
             $timeArray      = explode(':', $value);
             $timeArrayCount = count($timeArray);
             if ($timeArrayCount > 3) {

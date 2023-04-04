@@ -13,8 +13,7 @@ use W7\Validate\Support\Rule\BaseRule;
  */
 class MysqlEnum extends BaseRule
 {
-    /** @var false|Column  */
-    protected $column;
+    protected Column|false $column;
 
     public function __construct(string $table, string $field)
     {

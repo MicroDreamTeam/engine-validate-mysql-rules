@@ -15,7 +15,7 @@ class MysqlDate extends BaseMysqlRule
     {
         $unixTime = strtotime($value);
         if (false === $unixTime) {
-            return $unixTime;
+            return false;
         }
         return $unixTime >= -30610253143 && $unixTime <= 253402185600 && date('Y-m-d', $unixTime) == $value;
     }
