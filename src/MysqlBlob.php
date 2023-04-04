@@ -4,8 +4,7 @@ namespace Itwmw\Validate\Mysql\Rules;
 
 /**
  * 最多存储 65535字节的 BLOB 字段，存储时在内容前使用 2 字节表示内容的字节数
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 
 class MysqlBlob extends BaseMysqlRule
 {

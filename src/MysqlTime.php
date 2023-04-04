@@ -7,8 +7,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  *
  * 范围从 -838:59:59 到 838:59:59
  * 格式：HH:MM:SS
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlTime extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

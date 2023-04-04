@@ -9,8 +9,7 @@ use W7\Validate\Support\Rule\BaseRule;
 
 /**
  * 可从最多 64 个成员中选择集合为一个值
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlSet extends BaseRule
 {
     protected Column|false $column;

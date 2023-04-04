@@ -6,8 +6,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  * 单精度浮点数
  *
  * 取值范围从 -3.402823466E+38 到 -1.175494351E-38、0 以及从 1.175494351E-38 到 3.402823466E+38
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlFloat extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

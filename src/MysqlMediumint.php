@@ -6,8 +6,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  * 3 字节整数
  *
  * 有符号范围从 -8388608 到 8388607，无符号范围从 0 到 16777215
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlMediumint extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

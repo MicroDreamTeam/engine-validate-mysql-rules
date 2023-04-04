@@ -7,8 +7,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  *
  * 支持的范围从 1000-01-01 00:00:00 到 9999-12-31 23:59:59
  * 格式为：YYYY-MM-DD HH:MM:SS
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlDatetime extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

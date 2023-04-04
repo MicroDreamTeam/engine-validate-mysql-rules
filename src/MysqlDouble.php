@@ -8,8 +8,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  * 别名为：real，注：REAL_AS_FLOAT SQL 模式时它 real 是 FLOAT 的别名
  *
  * 取值范围从 -1.7976931348623157E+308 到 -2.2250738585072014E-308、0 以及从 2.2250738585072014E-308 到 1.7976931348623157E+308
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlDouble extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

@@ -9,8 +9,7 @@ use W7\Validate\Support\Rule\BaseRule;
 
 /**
  * 枚举，可从最多 65535 个值的列表中选择
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlEnum extends BaseRule
 {
     protected Column|false $column;

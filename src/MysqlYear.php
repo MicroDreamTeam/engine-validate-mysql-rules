@@ -7,8 +7,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  *
  * 四位数（4，默认）或两位数（2）的年份，取值范围从 70（1970）到 69（2069）或从 1901 到 2155 以及 0000
  * 格式 YYYY
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlYear extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

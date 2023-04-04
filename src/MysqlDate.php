@@ -7,8 +7,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  *
  * 支持的范围从 1000-01-01 到 9999-12-31
  * 格式为：YYYY-MM-DD
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlDate extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool

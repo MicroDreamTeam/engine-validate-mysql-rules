@@ -6,8 +6,7 @@ namespace Itwmw\Validate\Mysql\Rules;
  * 2 字节整数
  *
  * 有符号范围从 -32768 到 32767，无符号范围从 0 到 65535
- * @package Itwmw\Validate\Table\Mysql\Rules
- */
+ * */
 class MysqlSmallint extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool
