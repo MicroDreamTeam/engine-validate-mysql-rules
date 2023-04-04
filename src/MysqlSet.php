@@ -2,9 +2,6 @@
 
 namespace Itwmw\Validate\Mysql\Rules;
 
-use Itwmw\Table\Structure\Mysql\Column;
-use Itwmw\Table\Structure\Mysql\Mysql;
-use W7\Validate\Exception\ValidateException;
 use W7\Validate\Support\Rule\BaseRule;
 
 /**
@@ -12,19 +9,13 @@ use W7\Validate\Support\Rule\BaseRule;
  * */
 class MysqlSet extends BaseRule
 {
-    protected Column|false $column;
-
-    public function __construct(string $table, string $field)
+    public function __construct(protected array $value = [])
     {
-        $this->column = (new Mysql())->getDoctrineColumn($table, $field);
+
     }
 
     public function passes($attribute, $value): bool
     {
-        if (!$this->column) {
-            throw new ValidateException('Failed to get the field information of ' . $attribute);
-        }
-
         if (is_scalar($value)) {
             $value = explode(',', $value);
         }
@@ -33,6 +24,6 @@ class MysqlSet extends BaseRule
             return false;
         }
 
-        return count(array_intersect($this->column->options, $value)) === count($value);
+        return count(array_intersect($this->value, $value)) === count($value);
     }
 }
