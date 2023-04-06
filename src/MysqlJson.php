@@ -10,9 +10,10 @@ class MysqlJson extends BaseMysqlRule
     public function passes($attribute, $value): bool
     {
         if (is_string($value)) {
-            return !is_null(json_decode($value));
+            json_decode($value);
+            return JSON_ERROR_NONE === json_last_error();
         }
-        
+
         return is_array($value);
     }
 }
