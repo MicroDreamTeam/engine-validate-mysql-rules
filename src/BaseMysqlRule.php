@@ -49,7 +49,7 @@ abstract class BaseMysqlRule extends BaseRule
             $integer               = $numArray[0];
             $decimalRepresentation = $numArray[1];
         } else {
-            $decimalRepresentation = null;
+            $decimalRepresentation = '';
             $integer               = $num;
         }
 
