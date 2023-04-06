@@ -9,9 +9,10 @@ use W7\Validate\Support\Rule\BaseRule;
  * */
 class MysqlEnum extends BaseRule
 {
-    public function __construct(protected array $value = [])
+    protected array $value;
+    public function __construct(...$value)
     {
-
+        $this->value = $value;
     }
 
     public function passes($attribute, $value): bool
