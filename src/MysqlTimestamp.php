@@ -6,6 +6,10 @@ class MysqlTimestamp extends BaseMysqlRule
 {
     public function passes($attribute, $value): bool
     {
+        if (is_numeric($value)) {
+            return $value > 0 && $value < 2146619647;
+        }
+
         $unixTime = strtotime($value);
 
         if (false === $unixTime) {
