@@ -10,6 +10,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlBigint extends BaseMysqlRule
 {
+    protected $message = ":attribute 不是一个有效的 bigint 类型";
+
     public function passes($attribute, $value): bool
     {
         if ($this->unsigned) {

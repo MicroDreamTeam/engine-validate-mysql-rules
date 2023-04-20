@@ -9,6 +9,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlSmallint extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 smallint 类型';
+
     public function passes($attribute, $value): bool
     {
         if ($this->unsigned) {

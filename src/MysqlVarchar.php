@@ -9,6 +9,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlVarchar extends MysqlChar
 {
+    protected $message = ':attribute 不是一个有效的 varchar 类型';
+
     public function __construct(int $length = 2 ^ 16 - 1)
     {
         parent::__construct($length);

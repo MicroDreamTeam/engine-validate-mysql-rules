@@ -10,6 +10,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlTime extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 time 类型';
+
     public function passes($attribute, $value): bool
     {
         if (!is_scalar($value)) {

@@ -10,6 +10,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlYear extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 year 类型';
+
     public function passes($attribute, $value): bool
     {
         if (!is_numeric($value)) {

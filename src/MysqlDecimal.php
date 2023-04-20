@@ -9,6 +9,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlDecimal extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 decimal 类型';
+
     public function __construct(bool $unsigned = false, int $length = 65, int $precision = -1)
     {
         parent::__construct($unsigned, $length, $precision);

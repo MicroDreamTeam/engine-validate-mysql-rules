@@ -7,6 +7,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlJson extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 json 类型';
+
     public function passes($attribute, $value): bool
     {
         if (is_string($value)) {

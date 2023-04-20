@@ -7,6 +7,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlVarbinary extends MysqlVarchar
 {
+    protected $message = ':attribute 不是一个有效的 varbinary 类型';
+
     public function passes($attribute, $value): bool
     {
         if (!is_scalar($value)) {

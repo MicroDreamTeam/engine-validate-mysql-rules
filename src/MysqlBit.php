@@ -9,6 +9,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlBit extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 bit 类型';
+
     public function __construct(int $length = 64)
     {
         parent::__construct(false, $length, -1);

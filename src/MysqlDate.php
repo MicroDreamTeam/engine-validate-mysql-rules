@@ -10,6 +10,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlDate extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 date 类型';
+
     public function passes($attribute, $value): bool
     {
         $unixTime = strtotime($value);

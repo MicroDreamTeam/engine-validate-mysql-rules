@@ -7,6 +7,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlMediumtext extends MysqlChar
 {
+    protected $message = ':attribute 不是一个有效的 mediumtext 类型';
+
     public function __construct(int $length = 2 ^ 24 -1)
     {
         parent::__construct($length);

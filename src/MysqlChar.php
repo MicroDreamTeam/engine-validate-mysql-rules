@@ -9,6 +9,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlChar extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 char 类型';
+
     public function __construct(int $length = 255)
     {
         parent::__construct(false, $length, -1);

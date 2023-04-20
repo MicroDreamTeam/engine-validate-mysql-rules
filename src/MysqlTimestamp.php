@@ -4,6 +4,8 @@ namespace Itwmw\Validate\Mysql\Rules;
 
 class MysqlTimestamp extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 timestamp 类型';
+
     public function passes($attribute, $value): bool
     {
         if (is_numeric($value)) {

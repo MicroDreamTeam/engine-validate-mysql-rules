@@ -9,6 +9,8 @@ namespace Itwmw\Validate\Mysql\Rules;
  * */
 class MysqlFloat extends BaseMysqlRule
 {
+    protected $message = ':attribute 不是一个有效的 float 类型';
+
     public function passes($attribute, $value): bool
     {
         if ($this->unsigned) {
