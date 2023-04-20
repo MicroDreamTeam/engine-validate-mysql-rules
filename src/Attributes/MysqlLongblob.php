@@ -13,7 +13,7 @@ class MysqlLongblob implements RuleInterface
 {
     protected array $args = [];
 
-    public function __construct(int $length = 2 ^ 32 - 1)
+    public function __construct(int $length = 2 ** 32 - 1)
     {
         $this->args = func_get_args();
     }

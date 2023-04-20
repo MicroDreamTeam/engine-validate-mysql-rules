@@ -10,7 +10,7 @@ class MysqlBlob extends BaseMysqlRule
 {
     protected $message = ':attribute 不是一个有效的 blob 类型';
 
-    public function __construct(int $length = 2 ^ 16 - 1)
+    public function __construct(int $length = 2 ** 16 - 1)
     {
         parent::__construct(false, $length, -1);
     }

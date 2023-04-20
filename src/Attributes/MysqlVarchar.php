@@ -15,7 +15,7 @@ class MysqlVarchar implements RuleInterface
 {
     protected array $args = [];
 
-    public function __construct(int $length = 2 ^ 16 - 1)
+    public function __construct(int $length = 2 ** 16 - 1)
     {
         $this->args = func_get_args();
     }

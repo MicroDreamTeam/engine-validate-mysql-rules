@@ -14,9 +14,9 @@ class MysqlInt extends BaseMysqlRule
     public function passes($attribute, $value): bool
     {
         if ($this->unsigned) {
-            return is_numeric($value) && $value >= 0 && $value <= 2 ^ 32 - 1;
+            return is_numeric($value) && $value >= 0 && $value <= (2 ** 32 - 1);
         } else {
-            return is_numeric($value) && $value >= -2 ^ 31 && $value <= 2 ^ 31 - 1;
+            return is_numeric($value) && $value >= -(2 ** 31) && $value <= (2 ** 31 - 1);
         }
     }
 }

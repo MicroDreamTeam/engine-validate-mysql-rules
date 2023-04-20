@@ -9,7 +9,7 @@ class MysqlLongtext extends MysqlChar
 {
     protected $message = ':attribute 不是一个有效的 longtext 类型';
 
-    public function __construct(int $length = 2 ^ 32 - 1)
+    public function __construct(int $length = 2 ** 32 - 1)
     {
         parent::__construct($length);
     }

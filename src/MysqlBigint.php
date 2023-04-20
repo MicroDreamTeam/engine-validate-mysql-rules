@@ -15,9 +15,9 @@ class MysqlBigint extends BaseMysqlRule
     public function passes($attribute, $value): bool
     {
         if ($this->unsigned) {
-            return is_numeric($value) && $value >= 0 && $value <= 2 ^ 64 - 1;
+            return is_numeric($value) && $value >= 0 && $value <= (2 ** 64 - 1);
         } else {
-            return is_numeric($value) && $value >= -2 ^ 63 && $value <= 2 ^ 63 - 1;
+            return is_numeric($value) && $value >= -(2 ** 63) && $value <= (2 ** 63 - 1);
         }
     }
 }

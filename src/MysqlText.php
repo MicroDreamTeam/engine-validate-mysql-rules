@@ -11,7 +11,7 @@ class MysqlText extends MysqlVarchar
 {
     protected $message = ':attribute 不是一个有效的 text 类型';
 
-    public function __construct(int $length = 2 ^ 16 - 1)
+    public function __construct(int $length = 2 ** 16 - 1)
     {
         parent::__construct($length);
     }
