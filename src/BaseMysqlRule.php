@@ -6,13 +6,13 @@ use W7\Validate\Support\Rule\BaseRule;
 
 abstract class BaseMysqlRule extends BaseRule
 {
-    /** @var bool  */
+    /** @var bool */
     protected bool $unsigned = false;
 
-    /** @var int  */
+    /** @var int */
     protected int $length = -1;
 
-    /** @var int  */
+    /** @var int */
     protected int $precision = -1;
 
     public function __construct(bool $unsigned = false, int $length = -1, int $precision = -1)
@@ -24,7 +24,9 @@ abstract class BaseMysqlRule extends BaseRule
 
     /**
      * 获取数字的长度和精度
+     *
      * @param numeric $num 要获取的数字，受限于PHP的浮点数精度问题，实际上小数部分的具体数字超过13位就不准了，e不受影响
+     *
      * @return false|array
      */
     protected function getNumberLength($num)
@@ -69,12 +71,14 @@ abstract class BaseMysqlRule extends BaseRule
 
     /**
      * 判断给定的数字是否符合长度要求
+     *
      * @param numeric $num
+     *
      * @return bool
      */
     protected function checkNumberLength(float|int|string $num): bool
     {
-        list($numLength, $precision) = $this->getNumberLength($num);
+        [$numLength, $precision] = $this->getNumberLength($num);
 
         if (-1 === $this->length) {
             return true;
@@ -90,7 +94,9 @@ abstract class BaseMysqlRule extends BaseRule
 
     /**
      * 获取UTF8文本长度
+     *
      * @param null $string
+     *
      * @return int
      */
     protected function getUtf8StringLength($string = null): int

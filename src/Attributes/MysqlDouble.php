@@ -2,7 +2,6 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
@@ -12,7 +11,7 @@ use Itwmw\Validate\Attributes\Rules\RuleInterface;
  *
  * 取值范围从 -1.7976931348623157E+308 到 -2.2250738585072014E-308、0 以及从 2.2250738585072014E-308 到 1.7976931348623157E+308
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlDouble implements RuleInterface
 {
     protected array $args = [];

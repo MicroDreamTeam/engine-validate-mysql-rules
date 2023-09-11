@@ -2,13 +2,12 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
  * 枚举，可从最多 65535 个值的列表中选择
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlEnum implements RuleInterface
 {
     protected array $args = [];

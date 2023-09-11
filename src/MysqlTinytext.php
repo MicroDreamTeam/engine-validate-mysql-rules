@@ -9,7 +9,7 @@ class MysqlTinytext extends MysqlChar
 {
     protected $message = ':attribute 不是一个有效的 tinytext 类型';
 
-    public function __construct(int $length = 2 ** 8 -1)
+    public function __construct(int $length = 2 ** 8 - 1)
     {
         parent::__construct($length);
     }

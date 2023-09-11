@@ -2,7 +2,6 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
@@ -10,7 +9,7 @@ use Itwmw\Validate\Attributes\Rules\RuleInterface;
  *
  * 长度为0-255，默认 1,存储时会向右边补足空格到指定长度
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlChar implements RuleInterface
 {
     protected array $args = [];

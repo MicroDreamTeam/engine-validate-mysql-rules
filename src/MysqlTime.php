@@ -45,7 +45,7 @@ class MysqlTime extends BaseMysqlRule
                 return true;
             } else {
                 if ($timeArray[0] < 0) {
-                    $value = - $timeArray[0];
+                    $value = -$timeArray[0];
                 }
             }
         }

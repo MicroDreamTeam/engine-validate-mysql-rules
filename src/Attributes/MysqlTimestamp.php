@@ -2,11 +2,9 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
-
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlTimestamp implements RuleInterface
 {
     protected array $args = [];

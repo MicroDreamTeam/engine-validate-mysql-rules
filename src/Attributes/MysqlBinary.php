@@ -2,13 +2,12 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
  * 类似于 CHAR 类型，但其存储的是二进制字节串而不是非二进制字符串
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlBinary implements RuleInterface
 {
     protected array $args = [];

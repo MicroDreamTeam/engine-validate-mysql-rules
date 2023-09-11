@@ -5,7 +5,6 @@ namespace Itwmw\Validate\Mysql\Rules;
 /**
  * 最多存储 65535字节的 BLOB 字段，存储时在内容前使用 2 字节表示内容的字节数
  * */
-
 class MysqlBlob extends BaseMysqlRule
 {
     protected $message = ':attribute 不是一个有效的 blob 类型';

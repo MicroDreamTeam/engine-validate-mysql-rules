@@ -2,7 +2,6 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
@@ -10,7 +9,7 @@ use Itwmw\Validate\Attributes\Rules\RuleInterface;
  *
  * 每个值存储 M 位（默认为 1，最大为 64）
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlBit implements RuleInterface
 {
     protected array $args = [];

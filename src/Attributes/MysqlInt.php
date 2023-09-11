@@ -2,7 +2,6 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
@@ -10,7 +9,7 @@ use Itwmw\Validate\Attributes\Rules\RuleInterface;
  *
  * 有符号范围从 -2147483648 到 2147483647，无符号范围从 0 到 4294967295
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlInt implements RuleInterface
 {
     protected array $args = [];

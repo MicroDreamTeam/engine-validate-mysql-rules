@@ -2,13 +2,12 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
  * 最多存储 255字节的 BLOB 字段，存储时在内容前使用 1 字节表示内容的字节数
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlTinyblob implements RuleInterface
 {
     protected array $args = [];

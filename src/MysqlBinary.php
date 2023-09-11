@@ -8,6 +8,7 @@ namespace Itwmw\Validate\Mysql\Rules;
 class MysqlBinary extends MysqlChar
 {
     protected $message = ':attribute 不是一个有效的 binary 类型';
+
     public function passes($attribute, $value): bool
     {
         if (!is_scalar($value)) {

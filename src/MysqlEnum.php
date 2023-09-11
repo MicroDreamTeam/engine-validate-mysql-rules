@@ -12,6 +12,7 @@ class MysqlEnum extends BaseRule
     protected $message = ':attribute 不是一个有效的 enum 类型';
 
     protected array $value;
+
     public function __construct(...$value)
     {
         $this->value = $value;

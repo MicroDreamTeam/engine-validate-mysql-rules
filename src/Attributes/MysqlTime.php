@@ -2,7 +2,6 @@
 
 namespace Itwmw\Validate\Mysql\Rules\Attributes;
 
-use Attribute;
 use Itwmw\Validate\Attributes\Rules\RuleInterface;
 
 /**
@@ -11,7 +10,7 @@ use Itwmw\Validate\Attributes\Rules\RuleInterface;
  * 范围从 -838:59:59 到 838:59:59
  * 格式：HH:MM:SS
  * */
-#[Attribute(Attribute::TARGET_PROPERTY)]
+#[\Attribute(\Attribute::TARGET_PROPERTY)]
 class MysqlTime implements RuleInterface
 {
     protected array $args = [];
